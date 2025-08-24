@@ -16,7 +16,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.1")),
     .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "20.0.3")),
-    .package(path: "../SharedDomain"),
+    .package(path: "https://github.com/zeekands/Modularization-Domain-Module-IOS.git", .upToNextMajor(from: "1.0.0")),
   ],
   targets: [
     .target(
