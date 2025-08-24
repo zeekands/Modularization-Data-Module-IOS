@@ -24,7 +24,7 @@ let package = Package(
       dependencies: [
         .product(name: "Alamofire", package: "Alamofire"),
         .product(name: "RealmSwift", package: "realm-swift"),
-        .product(name: "SharedDomain", package: "SharedDomain"),
+        .product(name: "SharedDomain", package: "Modularization-Domain-Module-IOS"),
       ]
     ),
     .testTarget(
