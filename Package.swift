@@ -19,7 +19,7 @@ let package = Package(
     .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "20.0.3")),
     .package(name: "SharedDomainPkg",
              url: "https://github.com/zeekands/Modularization-Domain-Module-IOS.git",
-             from: "1.0.0"),
+             branch: "main"),
   ],
   targets: [
     .target(
