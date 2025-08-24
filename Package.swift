@@ -14,10 +14,12 @@ let package = Package(
       targets: ["SharedData"]),
   ],
   dependencies: [
+    // Ini adalah dependensi eksternal dari pihak ketiga
     .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.1")),
     .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "20.0.3")),
-    // PERBAIKAN DI SINI:
-    // Hapus dependensi yang salah dan ganti dengan SharedDomain.
+    
+    // PERHATIKAN: Dependensi di sini HARUS SharedDomain, bukan SharedData.
+    // Ganti baris yang salah dengan ini:
     .package(url: "https://github.com/zeekands/Modularization-Domain-Module-IOS.git", .upToNextMajor(from: "1.0.0")),
   ],
   targets: [
@@ -26,7 +28,7 @@ let package = Package(
       dependencies: [
         .product(name: "Alamofire", package: "Alamofire"),
         .product(name: "RealmSwift", package: "realm-swift"),
-        // Referensi ke produk SharedDomain sudah benar
+        // Perbaiki nama paket agar merujuk ke SharedDomain
         .product(name: "SharedDomain", package: "Modularization-Domain-Module-IOS"),
       ]
     ),
