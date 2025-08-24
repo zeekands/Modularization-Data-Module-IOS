@@ -16,7 +16,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.1")),
     .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "20.0.3")),
-    .package(path: "https://github.com/zeekands/Modularization-Domain-Module-IOS.git", .upToNextMajor(from: "1.0.0")),
+    .package(url: "https://github.com/zeekands/Modularization-Data-Module-IOS.git", .upToNextMajor(from: "1.0.0")),
   ],
   targets: [
     .target(
@@ -24,7 +24,7 @@ let package = Package(
       dependencies: [
         .product(name: "Alamofire", package: "Alamofire"),
         .product(name: "RealmSwift", package: "realm-swift"),
-        .product(name: "SharedDomain", package: "Modularization-Domain-Module-IOS"),
+        .product(name: "SharedDomain", package: "Modularization-Data-Module-IOS"),
       ]
     ),
     .testTarget(
